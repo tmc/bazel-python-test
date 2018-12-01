@@ -1,3 +1,6 @@
+name: "bazel python experiments"
 steps:
   - label: Build
     command: bazel build //...
+  - label: Test
+    command: bazel test //...
