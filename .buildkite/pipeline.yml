@@ -1,6 +1,3 @@
 steps:
   - label: Build
     command: bazel build //...
-steps:
-  - label: Test
-    command: bazel test //...
