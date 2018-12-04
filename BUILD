@@ -25,7 +25,7 @@ py_image(
     main = "hello-world.py",
 )
 py3_image(
-    name = "hello_world_3",
+    name = "hello_world_image_3",
     srcs = ["hello-world.py"],
     deps = [ requirement("httplib2"), ],
     main = "hello-world.py",

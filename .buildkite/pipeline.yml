@@ -4,3 +4,9 @@ steps:
     command: bazel test //...
   - label: Build remaining targets
     command: bazel build //...
+  - label: Run images
+    command: bazel run hello_world
+  - label: Run images
+    command: bazel run hello_world_image
+  - label: Run images
+    command: bazel run hello_world_image_3
