@@ -3,7 +3,7 @@
 py_runtime(
     name = "python36",
     files = [],
-    interpreter_path = "/usr/bin/python3",
+    interpreter_path = "/usr/local/bin/python3",
     visibility = ["//visibility:public"],
 )
 
