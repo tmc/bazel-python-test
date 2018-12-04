@@ -3,7 +3,7 @@
 py_runtime(
     name = "python36",
     files = [],
-    interpreter_path = "/usr/local/Cellar/python@3.6/3.6.5/bin/python3",
+    interpreter_path = "/usr/bin/python",
     visibility = ["//visibility:public"],
 )
 
@@ -24,6 +24,7 @@ py_image(
     deps = [ requirement("httplib2"), ],
     main = "hello-world.py",
 )
+
 py3_image(
     name = "hello_world_image_3",
     srcs = ["hello-world.py"],
