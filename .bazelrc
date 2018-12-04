@@ -1,6 +1,3 @@
 common --color=yes
 build --verbose_failures
-build --python_top=//:python36
 test --verbose_failures --test_output=errors --test_verbose_timeout_warnings
-test --python_top=//:python36
-
