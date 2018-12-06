@@ -32,7 +32,18 @@ jobs:
       - run: ~/bin/bazel run //:hello_world_image_3
 workflows:
   version: 2
-  build_and_test:
+  commit:
+    jobs:
+      - build-bazel-20
+      - build-bazel-19
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build-bazel-20
       - build-bazel-19

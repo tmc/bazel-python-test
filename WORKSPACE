@@ -4,9 +4,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 git_repository(
     name = "io_bazel_rules_python",
     remote = "https://github.com/bazelbuild/rules_python.git",
-    commit = "f3a6a8d00a51a1f0e6d61bc7065c19fea2b3dd7a",
+    branch = "master",
 )
-
 
 load("@io_bazel_rules_python//python:pip.bzl", "pip_repositories")
 
@@ -22,16 +21,12 @@ pip_import(
 load("@deps//:requirements.bzl", "pip_install")
 pip_install()
 
-#git_repository(
-#    name = "io_bazel_rules_docker_tmc",
-#    remote = "https://github.com/tmc/rules_docker.git",
-#    branch = "master",
-#)
-
-local_repository(
+git_repository(
     name = "io_bazel_rules_docker",
-    path = "/Users/tmc/go/src/github.com/bazelbuild/rules_docker",
+    remote = "https://github.com/bazelbuild/rules_docker.git",
+    branch = "master",
 )
+
 # Call this to override the default docker toolchain configuration. This call
 # should be placed BEFORE the call to "container_repositories" below to actually
 # override the default toolchain configuration
