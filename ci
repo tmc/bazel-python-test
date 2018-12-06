@@ -1,0 +1,6 @@
+apt-get install -y build-essential
+~/bin/bazel build //...
+~/bin/bazel test //...
+~/bin/bazel run //:hello_world
+~/bin/bazel run //:hello_world_image
+~/bin/bazel run //:hello_world_image_3

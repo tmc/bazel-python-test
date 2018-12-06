@@ -10,11 +10,7 @@ jobs:
           command: |
             wget https://github.com/bazelbuild/bazel/releases/download/0.20.0/bazel-0.20.0-installer-linux-x86_64.sh
             bash bazel-0.20.0-installer-linux-x86_64.sh --user
-      - run: ~/bin/bazel build //...
-      - run: ~/bin/bazel test //...
-      - run: ~/bin/bazel run //:hello_world
-      - run: ~/bin/bazel run //:hello_world_image
-      - run: ~/bin/bazel run //:hello_world_image_3
+      - run: ./ci
   build-bazel-19:
     docker:
       - image: circleci/buildpack-deps:bionic-curl
@@ -25,11 +21,7 @@ jobs:
           command: |
             wget https://github.com/bazelbuild/bazel/releases/download/0.19.2/bazel-0.19.2-installer-linux-x86_64.sh
             bash bazel-0.19.2-installer-linux-x86_64.sh --user
-      - run: ~/bin/bazel build //...
-      - run: ~/bin/bazel test //...
-      - run: ~/bin/bazel run //:hello_world
-      - run: ~/bin/bazel run //:hello_world_image
-      - run: ~/bin/bazel run //:hello_world_image_3
+      - run: ./ci
 workflows:
   version: 2
   commit:
